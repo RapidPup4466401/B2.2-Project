@@ -1762,7 +1762,7 @@
 		"specialistSlots": {"Scientist": 10},
 		"uniques": [
 			"Unavailable <if [AI Control Unit] is constructed> <hidden from users>",
-			"[Drone] units gain the [De-Centralization] promotion",
+			"[{Ground Drone}{Aerial Drone}{Naval Drone}{Space Drone}] units gain the [De-Centralization] promotion",
 			"Only available <in cities with a [Research Center]> <hidden from users>",
 			"Only available <in cities with a [Research Lab]> <hidden from users>",
 			"Only available <in cities with a [Institute of Artificial Intelligence Research]> <hidden from users>",
@@ -3062,7 +3062,7 @@
 		"specialistSlots": {"Scientist": 10},
 		"uniques": [
 			"Unavailable <if [De-Centralized AI Networks] is constructed> <hidden from users>",
-			"[Drone] units gain the [Centralization] promotion",
+			"[{Ground Drone}{Aerial Drone}{Naval Drone}{Space Drone}] units gain the [Centralization] promotion",
 			"Only available <in cities with a [Research Center]> <hidden from users>",
 			"Only available <in cities with a [Research Lab]> <hidden from users>",
 			"Only available <in cities with a [Institute of Artificial Intelligence Research]> <hidden from users>",
