@@ -201,6 +201,20 @@
 	//Industry for all nation cities, buildings that increase production capabilities and/or resources
 
 	{
+		"name": "Industrial 3D Printer",
+		"maintenance": 3,
+		"cost": 3000,
+		"production": 10,
+		"requiredTech": "Mass 3D Printing I",
+		"uniques": [
+			"Only available <in cities with a [Manufacturing Plant]> <hidden from users>",
+			"Only availabe [in this city] <with [Microchip]> <hidden from users>",
+			"Only availabe [in this city] <with [Aluminum]> <hidden from users>",
+			"[+10]% [Production] [in this city] <with [Aluminum]> <hidden from users>",
+			"[+10]% [Production] [in this city] <with [Titanium]> <hidden from users>",
+			"Destroyed when the city is captured <hidden from users>"],
+	},
+	{
 		"name": "Additive Manufacturing Plant",
 		"maintenance": 5,
 		"cost": 6000,
@@ -1093,6 +1107,8 @@
 			"Only available [in this city] <with [Iron]> <hidden from users>",
 			"Consumes [1] [Iron]",
 			"Provides [1] [Steel] <with [Iron]>",
+			"Provides [1] [Steel] <with [Coal]>",
+			"Provides [1] [Steel] <with [Manganese]>",
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
@@ -1107,7 +1123,9 @@
 			"Only available [in this city] <with [Coal]> <hidden from users>",
 			"Consumes [2] [Iron]",
 			"Consumes [2] [Coal]",
-			"Provides [5] [Steel] <with [Iron]>",
+			"Provides [3] [Steel] <with [Iron]>",
+			"Provides [2] [Steel] <with [Coal]>",
+			"Provides [2] [Steel] <with [Manganese]>",
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
@@ -1123,7 +1141,8 @@
 			"Only available [in this city] <with [Coal]> <hidden from users>",
 			"Consumes [2] [Iron]",
 			"Consumes [2] [Coal]",
-			"Provides [8] [Steel] <with [Iron]> <with [Coal]>",
+			"Provides [5] [Steel] <with [Iron]>",
+			"Provides [5] [Steel] <with [Coal]>",
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
@@ -1136,8 +1155,9 @@
 			"Only available <in cities with a [Factory]> <hidden from users>",
 			"Only available [in this city] <with [Manganese]> <hidden from users>",
 			"Consumes [1] [Iron]",
-			"Consumes [1] [Manganese]",
 			"Provides [2] [Steel] <with [Iron]>",
+			"Provides [2] [Steel] <with [Manganese]",
+			"Provides [2] [Steel] <with [Coal]>",
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
@@ -1151,7 +1171,7 @@
 			"Only available <in cities with a [Manufacturing Plant]> <hidden from users>",
 			"Only available [in this city] <with [Sulfur]> <hidden from users>",
 			"Consumes [1] [Sulfur]",
-			"Provides [2] [Rubber]",
+			"Provides [3] [Rubber] <with [Sulfur]>",
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
@@ -1316,6 +1336,18 @@
 		"requiredTech": "Digitalization",
 		"uniques": [
 			"Only available <in cities with a [Broadcast Tower]> <hidden from users>"],		
+	},
+	{
+		"name": "Designer Baby Facility",
+		"maintenance": 10,
+		"cost": 7000,
+		"happiness": 4,
+		"requiredTech": "Metagenesis",
+		"uniques": [
+			"New [Military] units start with [10] Experience [in this city]",
+			"Only available <in cities with a [Hospital]> <hidden from users>",
+			"Only available <in cities with a [Genetic Modification Facility]> <hidden from users>",
+			"Only available <if [National Genome Research Institute] is constructed> <in [in capital] cities> <hidden from users>"],		
 	},
 	{
 		"name": "Image Generators",
@@ -2000,6 +2032,18 @@
 		"uniques": ["Destroyed when the city is captured <hidden from users>"],
 	},
 	{
+		"name": "Transit Tunnels",
+		"maintenance": 4,
+		"cost": 1500,
+		"requiredBuilding": "Fortified Tunnels",
+		"cityHealth": 15,
+		"requiredTech": "Mountain Mining III",
+		"uniques": 
+		[
+			"Destroyed when the city is captured <hidden from users>"
+		],
+	},
+	{
 		"name": "Urban Defenses",
 		"maintenance": 2,
 		"cost": 1000,
@@ -2374,6 +2418,29 @@
 	// National Buildings
 
 	{
+		"name": "Deep Space Colony",
+		"isNationalWonder": "True",
+		"cost": 35000,
+		"happiness": 2,
+		"maintenance": 15,
+		"science": 20,
+		"culture": 15,
+		"requiredTech": "Space Colonization",
+		"specialistSlots": {"Scientist": 10},
+		"uniques": 
+		[
+			"Only available <in cities with [Lunar Colony]> <hidden from users>",
+			"Only available <in cities with [Orbital Starship Support Structure]> <hidden from users>",
+			"Only available <in cities with [Explore Space III]> <hidden from users>",
+			"Only available <in cities with [Spaceport]> <hidden from users>",
+			"[+20]% [Culture] [in this city]",
+			"[+20]% [Science] [in this city]",
+			"Cost increases by [500] per owned city <hidden from users>",
+			"Cannot be purchased <hidden from users>",
+			"Unsellable <hidden from users>"
+		],
+	},
+	{
 		"name": "Experimental Weapons Testing Site",
 		"isNationalWonder": true,
 		"cost": 2000,
@@ -2389,6 +2456,28 @@
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
+		"name": "Interstellar Colony",
+		"isNationalWonder": "True",
+		"cost": 150000,
+		"happiness": 5,
+		"maintenance": 100,
+		"science": 40,
+		"culture": 30,
+		"requiredTech": "Space Colonization",
+		"specialistSlots": {"Scientist": 20},
+		"uniques": 
+		[
+			"Only available <in cities with [Deep Space Colony]> <hidden from users>",
+			"Only available <in cities with [Spaceport]> <hidden from users>",
+			"[+40]% [Culture] [in this city]",
+			"[+40]% [Production] [in this city]",
+			"[+40]% [Science] [in this city]",
+			"Cost increases by [500] per owned city <hidden from users>",
+			"Cannot be purchased <hidden from users>",
+			"Unsellable <hidden from users>"
+		],
+	},
+	{
 		"name": "Logistical Hub",
 		"isNationalWonder": true,
 		"maintenance": 9,
@@ -2400,6 +2489,28 @@
 			"[15] Unit Supply <when not at war>",
 			"[20] Unit Supply <when at war>",
 			"Destroyed when the city is captured <hidden from users>"],
+	},
+	{
+		"name": "Lunar Colony",
+		"isNationalWonder": "True",
+		"cost": 15000,
+		"happiness": 2,
+		"maintenance": 10,
+		"science": 20,
+		"culture": 15,
+		"requiredTech": "Space Exploration III",
+		"specialistSlots": {"Scientist": 5},
+		"uniques": 
+		[
+			"Only available <in cities with [Space Station]> <hidden from users>",
+			"Only available <in cities with [Explore Space II]> <hidden from users>",
+			"Only available <in cities with [Spaceport]> <hidden from users>",
+			"[+20]% [Culture] [in this city]",
+			"[+20]% [Science] [in this city]",
+			"Cost increases by [500] per owned city <hidden from users>",
+			"Cannot be purchased <hidden from users>",
+			"Unsellable <hidden from users>"
+		],
 	},
 	{
 		"name": "National Culture Center",
