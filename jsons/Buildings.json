@@ -653,6 +653,19 @@
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
+		"name": "Dark Energy Reactor Plant",
+		"maintenance": 10,
+		"cost": 20000,
+		"production": 50,
+		"requiredTech": "Dark Energy",
+		"uniques": 
+		[
+			"Only available <in cities with a [Dark Energy Research Facility]> <hidden from users>",
+			"[+20]% [Production] [in this city]",
+			"Destroyed when the city is captured <hidden from users>"
+		],
+	},
+	{
 		"name": "Dark Matter Production Facility",
 		"maintenance": 25,
 		"cost": 10000,
@@ -1175,6 +1188,17 @@
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
+		"name": "Industrial Teleportation Hub",
+		"maintenance": 35,
+		"cost": 24000,
+		"production": 30,
+		"requiredTech": "String Applications",
+		"uniques": [
+			"Only available <in cities with a [Teleportation Hub]> <hidden from users>",
+			"[+50]% [Production] [in this city]",
+			"Destroyed when the city is captured <hidden from users>"],
+	},
+	{
 		"name": "Titanium Synthesis Plant",
 		"maintenance": 11,
 		"cost": 9500,
@@ -1329,6 +1353,17 @@
 			"Only available <in cities with a [Chatbots]> <hidden from users>"],		
 	},
 	{
+		"name": "Cloning Facility",
+		"maintenance": 20,
+		"cost": 40000,
+		"requiredTech": "Cloning",
+		"uniques": [
+			"Only available <in cities with a [Hospital]> <hidden from users>",
+			"Only available <in cities with a [Genetic Modification Facility]> <hidden from users>",
+			"Only available <in cities with a [Institute of Technology]> <hidden from users>",
+			"Only available <if [National Genome Research Institute] is constructed> <in [in capital] cities> <hidden from users>"],		
+	},
+	{
 		"name": "Data Center",
 		"maintenance": 3,
 		"cost": 2000,
@@ -1406,6 +1441,18 @@
 		"requiredTech": "Generative Intelligence",
 		"uniques": [
 			"Only available <in cities with a [Data Center]> <hidden from users>"],		
+	},
+	{
+		"name": "Teleportation Hub",
+		"maintenance": 30,
+		"cost": 12000,
+		"happiness": 10,
+		"requiredTech": "String Applications",
+		"uniques": 
+		[
+			"Only available <in cities with a [Teleportation Research Facility]> <hidden from users>",
+			"Destroyed when the city is captured <hidden from users>"
+		],
 	},
 	{
 		"name": "Virtual Reality Equipment",
@@ -1660,17 +1707,6 @@
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
-		"name": "Dronebase",
-		"maintenance": 6,
-		"cost": 12000,
-		"requiredTech": "Drones",
-		"uniques": [
-			"Only available <in this city> <if [Military Base] is constructed> <hidden from users>",
-			"Only available <in this city> <if [Paved Runway] is constructed> <hidden from users>",
-			"Consumes [1] [Aluminum]",
-			"Destroyed when the city is captured <hidden from users>"],
-	},
-	{
 		"name": "Basic Training Facilities",
 		"maintenance": 2,
 		"cost": 500,
@@ -1717,6 +1753,24 @@
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
+		"name": "De-Centralized AI Networks",
+		"isNationalWonder": "True",
+		"maintenance": 12,
+		"cost": 20000,
+		"science": 50,
+		"requiredTech": "Super Intelligence",
+		"specialistSlots": {"Scientist": 10},
+		"uniques": [
+			"Unavailable <if [AI Control Unit] is constructed> <hidden from users>",
+			"[Drone] units gain the [De-Centralization] promotion",
+			"Only available <in cities with a [Research Center]> <hidden from users>",
+			"Only available <in cities with a [Research Lab]> <hidden from users>",
+			"Only available <in cities with a [Institute of Artificial Intelligence Research]> <hidden from users>",
+			"Consumes [5] [Microchip]",
+			"[+50]% [Science] [in this city]",
+			"Destroyed when the city is captured <hidden from users>"],
+	},
+	{
 		"name": "Defensive Trenches",
 		"cost": 100,
 		"cityHealth": 35,
@@ -1739,6 +1793,17 @@
 			"[2] Unit Supply <when at war> <with [Steel]>",
 			"[1] [Happiness] [in this city] <when not at war> <with [Steel]>",
 			"[-3] [Happiness] [in this city] <when at war> <with [Steel]>",
+			"Destroyed when the city is captured <hidden from users>"],
+	},
+	{
+		"name": "Dronebase",
+		"maintenance": 6,
+		"cost": 12000,
+		"requiredTech": "Drones",
+		"uniques": [
+			"Only available <in this city> <if [Military Base] is constructed> <hidden from users>",
+			"Only available <in this city> <if [Paved Runway] is constructed> <hidden from users>",
+			"Consumes [1] [Aluminum]",
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
@@ -1936,6 +2001,20 @@
 		"cityHealth": 5,
 		"requiredTech": "Electronics",
 		"uniques": ["Destroyed when the city is captured <hidden from users>"],
+	},
+	{
+		"name": "Nanitic Equipments Manufacturing Plant",
+		"cost": 5000,
+		"maintenance": 5,
+		"production": 5,
+		"requiredTech": "Nanitic Enhancements",
+		"uniques": [
+			"Only available <in cities with a [Manufacturing Plant]> <hidden from users>",
+			"Only available [in this city] <with [Titanium]> <hidden from users>",
+			"Consumes [1] [Titanium]",
+			"New [Military] units start with [15] Experience [in this city]",
+			"Destroyed when the city is captured <hidden from users>"
+		],
 	},
 	{
 		"name": "Parabolic Antennaes",
@@ -2971,8 +3050,26 @@
 	// Buildings that primarily focuses on increasing science and/or science-related aspects of the city. 
 	// Base Science Buildings
 
-	// Extra Science Buildings
+	// Extra Science Buildings [Science Pack]
 
+	{
+		"name": "AI Control Unit",
+		"isNationalWonder": "True",
+		"maintenance": 12,
+		"cost": 20000,
+		"science": 50,
+		"requiredTech": "Super Intelligence",
+		"specialistSlots": {"Scientist": 10},
+		"uniques": [
+			"Unavailable <if [De-Centralized AI Networks] is constructed> <hidden from users>",
+			"[Drone] units gain the [Centralization] promotion",
+			"Only available <in cities with a [Research Center]> <hidden from users>",
+			"Only available <in cities with a [Research Lab]> <hidden from users>",
+			"Only available <in cities with a [Institute of Artificial Intelligence Research]> <hidden from users>",
+			"Consumes [5] [Microchip]",
+			"[+50]% [Science] [in this city]",
+			"Destroyed when the city is captured <hidden from users>"],
+	},
 	{
 		"name": "Antimatter Research Facility",
 		"maintenance": 8,
@@ -2997,7 +3094,8 @@
 		"uniques": [
 			"Only available <in cities with a [Research Center]> <hidden from users>",
 			"Only available <in cities with a [Research Lab]> <hidden from users>",
-			"Must be on [Coastal]","[+5]% [Food] [in this city]",
+			"Must be on [Coastal]",
+			"[+5]% [Food] [in this city]",
 			"Destroyed when the city is captured <hidden from users>",
 			"Must have an owned [Fish] within [2] tiles"],
 	},
@@ -3098,35 +3196,6 @@
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
-		"name": "Simulation Softwares",
-		"cost": 2000,
-		"maintenance": 1,
-		"happiness": 4,
-		"science": 12,
-		"specialistSlots": {"Scientist": 6},
-		"requiredTech": "Simulations",
-		"uniques": [
-			"Only available <in cities with a [Institute of Artificial Intelligence Research]> ",
-			"Only available <in cities with a [Research Center]> <hidden from users>",
-			"Only available <in cities with a [Data Center]> <hidden from users>",
-			"[+5]% [Science] [in this city]",
-			"Destroyed when the city is captured <hidden from users>"],
-	},
-	{
-		"name": "Synthetic Fluid Research Facility",
-		"cost": 2000,
-		"maintenance": 10,
-		"happiness": 1,
-		"science": 8,
-		"specialistSlots": {"Scientist": 2},
-		"requiredTech": "Synthesization",
-		"uniques": [
-			"Only available <in cities with a [Research Center]> <hidden from users>",
-			"Only available <in cities with a [Research Lab]> <hidden from users>",
-			"[+5]% [Science] [in this city]",
-			"Destroyed when the city is captured <hidden from users>"],
-	},
-	{
 		"name": "Gravitational Influxes Research Facility",
 		"cost": 8000,
 		"maintenance": 10,
@@ -3212,6 +3281,37 @@
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
+		"name": "Specialized Predictive Softwares",
+		"cost": 4000,
+		"maintenance": 1,
+		"happiness": 2,
+		"science":5,
+		"specialistSlots": {"Scientist": 2},
+		"requiredTech": "Advanced Simulations",
+		"uniques": [
+			"Only available <in cities with a [Institute of Artificial Intelligence Research]> ",
+			"Only available <in cities with a [Simulation Softwares]> <hidden from users>",
+			"Only available <in cities with a [Data Center]> <hidden from users>",
+			"[+10]% [Science] [in this city]",
+			"Destroyed when the city is captured <hidden from users>"],
+	},
+	{
+		"name": "Miniverse",
+		"cost": 16000,
+		"isNationalWonder": true,
+		"maintenance": 10,
+		"happiness": 4,
+		"science":50,
+		"specialistSlots": {"Scientist": 8},
+		"requiredTech": "Advanced Simulations",
+		"uniques": [
+			"Only available <in cities with a [Institute of Artificial Intelligence Research]> ",
+			"Only available <in cities with a [Specialized Predictive Softwares Softwares]> <hidden from users>",
+			"Only available <in cities with a [Quantum Data Center]> <hidden from users>",
+			"[+25]% [Science] [in this city]",
+			"Destroyed when the city is captured <hidden from users>"],
+	},
+	{
 		"name": "Quantum Test Facility",
 		"cost": 5000,
 		"maintenance": 8,
@@ -3254,6 +3354,21 @@
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
+		"name": "Simulation Softwares",
+		"cost": 2000,
+		"maintenance": 1,
+		"happiness": 4,
+		"science": 12,
+		"specialistSlots": {"Scientist": 6},
+		"requiredTech": "Simulations",
+		"uniques": [
+			"Only available <in cities with a [Institute of Artificial Intelligence Research]> ",
+			"Only available <in cities with a [Research Center]> <hidden from users>",
+			"Only available <in cities with a [Data Center]> <hidden from users>",
+			"[+5]% [Science] [in this city]",
+			"Destroyed when the city is captured <hidden from users>"],
+	},
+	{
 		"name": "Subterranean Research Facility",
 		"maintenance": 5,
 		"cost": 2500,
@@ -3274,6 +3389,32 @@
 			"Only available <in cities with a [Research Lab]> <hidden from users>",
 			"Only available <in cities with a [Research Center]> <hidden from users>",
 			"Only available <in cities with a [Metallurgy Research Lab]> <hidden from users>",
+			"Destroyed when the city is captured <hidden from users>"],
+	},
+	{
+		"name": "Synthetic Fluid Research Facility",
+		"cost": 2000,
+		"maintenance": 10,
+		"happiness": 1,
+		"science": 8,
+		"specialistSlots": {"Scientist": 2},
+		"requiredTech": "Synthesization",
+		"uniques": [
+			"Only available <in cities with a [Research Center]> <hidden from users>",
+			"Only available <in cities with a [Research Lab]> <hidden from users>",
+			"[+5]% [Science] [in this city]",
+			"Destroyed when the city is captured <hidden from users>"],
+	},
+	{
+		"name": "Teleportation Research Facility",
+		"maintenance": 30,
+		"cost": 12000,
+		"science": 15,
+		"requiredTech": "String Applications",
+		"uniques": [
+			"Only available <in cities with a [Research Lab]> <hidden from users>",
+			"Only available <in cities with a [Research Center]> <hidden from users>",
+			"Only available <in cities with a [Simulation Softwares]> <hidden from users>",
 			"Destroyed when the city is captured <hidden from users>"],
 	},
 	{
