@@ -1752,6 +1752,7 @@
 			"Only available <in cities with a [Chokepoints]>",
 			"Destroyed when the city is captured <hidden from users>"],
 	},
+	//For DC AI Net and AI Con Unit, make it so if AI Con Unit is destroyed, all drones with Centralized promotion recieve a debuff until it is built or this building is built.
 	{
 		"name": "De-Centralized AI Networks",
 		"isNationalWonder": "True",
