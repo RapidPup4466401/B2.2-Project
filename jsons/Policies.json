@@ -288,5 +288,72 @@
                 "uniques": ["Free [Great Engineer] appears"],
             }
                 ]
+    },
+    {
+        "name": "Adaptive Genomics",
+        "era": "Future era",
+        "priorities": {
+            "Neutral": 0,
+            "Cultural": 10,
+            "Diplomatic": 0,
+            "Domination": 0,
+            "Scientific": 5
+        },
+        "uniques": [
+            "[+5 Happiness] [in all cities]",
+            "Only available <after discovering [Metagenesis]> <hidden from users>"],
+        "policies": [
+            {
+                "name": "Designer Babies",
+                "uniques": [
+                    "[+10]% Happiness [in all cities] <when not at war>",
+                    "[+10]% Production [in all cities] <when at war>",
+                    "[+10]% Gold [in all cities] <during a Golden Age>",
+                    "[+10]% Culture [in all cities] <whe not in a Golden Age>"],
+                "row": 1,
+                "column": 1,
+            },
+            {
+                "name": "Cosmetic Genes",
+                "uniques": 
+                [
+                    "[+2 Culture, +2 Happiness] per [1] population [in all cities]"
+                ],
+                "row": 1,
+                "column": 3,
+            },
+            {
+                "name": "Super Soldiers",
+                "uniques": [
+                   "All newly-trained [Military] units [in all cities] receive the [Super Soldier] promotion"],
+                "row": 1,
+                "column": 5,
+            },
+            {
+                "name": "Morphic Focus",
+                "uniques": 
+                [
+                    "[+25]% Happiness [in all cities]"
+                ],
+                "requires": ["Super Soldiers","Cosmetic Genes"],
+                "row": 2,
+                "column": 3,
+            },
+            {
+                "name": "Artificial Genome",
+                "uniques": [
+                    "[+15]% [Gold] [in all cities]",
+                    "[+110]% [Culture] [in all cities]",
+                    "[+51]% [Science] [in all cities]"
+                ],
+                "requires": ["Morphic Focus"],
+                "row": 3,
+                "column": 3
+            },
+            {
+                "name": "Adaptive Genomics Complete",
+                "uniques": ["Free [Great Scientist] appears"],
+            }
+                ]
     }
 ]
